@@ -1,0 +1,26 @@
+package Steps;
+import elementos.Elementos;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import metodos.Metodos;
+public class FormularioLogin {
+	Metodos metodo = new Metodos();
+	Elementos el = new Elementos();
+	@When("preencher o formuario")
+	public void preencher_o_formuario()  {
+		
+	    metodo.digitarTexto(el.getName(), "João");
+	    metodo.digitarTexto(el.getPassword(), "7887");
+	    metodo.clicar(el.getSign());
+	}
+
+	@Then("valido usuario logado")
+	public void valido_usuario_logado() {
+	   
+	}
+
+	@Then("coleto evidencia")
+	public void coleto_evidencia() {
+	    
+	}
+}

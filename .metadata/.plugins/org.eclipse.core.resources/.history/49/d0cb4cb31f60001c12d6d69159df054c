@@ -1,0 +1,33 @@
+package Steps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class FormularioLogin extends FormularioDeCadastro{
+	@Given("que eu esteja no {string}")
+	public void que_eu_esteja_no(String site) {
+		metodo.abrirNavegador(site);
+	}
+	@Given("clico no incone USER")
+	public void clico_no_incone_user() {
+		metodo.clicar(el.getMenuUser());
+	}
+
+	@When("preencher o formuario")
+	public void preencher_o_formuario() {
+	    metodo.digitarTexto(el.getName(), "João");
+	    metodo.digitarTexto(el.getPassword(), "7887");
+	    metodo.clicar(el.getSign());
+	}
+
+	@Then("valido usuario logado")
+	public void valido_usuario_logado() {
+	   
+	}
+
+	@Then("coleto evidencia")
+	public void coleto_evidencia() {
+	    
+	}
+}

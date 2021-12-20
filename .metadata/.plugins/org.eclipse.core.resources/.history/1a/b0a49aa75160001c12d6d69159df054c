@@ -1,0 +1,27 @@
+package Steps;
+
+import io.cucumber.java.en.When;
+
+public class CadastroComEmailInvalido extends FormularioDeCadastro{
+
+	@When("preencher formulario de CREATE ACCOUNT com email ivalido")
+	public void preencher_formulario_de_create_account_com_email_ivalido() {
+		metodo.digitarTexto(el.getUserName(), "Ribamarzeroaa");
+		metodo.digitarTexto(el.getEmailRegisterPage(), "lukaz_somar@hotmail.com");
+		metodo.digitarTexto(el.getPasswordRegisterPage(), "Test2@21");
+		metodo.digitarTexto(el.getConfirmPasswordRegisterPage(), "Test2@21");
+		metodo.digitarTexto(el.getFirstNameRegisterPage(), "Ribamar");
+		metodo.digitarTexto(el.getLastNameRegisterPage(), "Silva");
+		metodo.digitarTexto(el.getPhoneNumberRegisterPage(), "11950504040");
+		metodo.digitarTexto(el.getCountryListboxRegisterPage(), "Brazil");
+		metodo.digitarTexto(el.getCityRegisterPage(), "São Paulo");
+		metodo.digitarTexto(el.getAddressRegisterPage(), "Av. Paulista");
+		metodo.digitarTexto(el.getStateProvinceRegionRegisterPage(), "São Paulo");
+		metodo.digitarTexto(el.getPostalCodeRegisterPage(), "15370-496");
+	}
+
+	@When("nao conclui o cadastro")
+	public void nao_conclui_o_cadastro() {
+	   
+	}
+}

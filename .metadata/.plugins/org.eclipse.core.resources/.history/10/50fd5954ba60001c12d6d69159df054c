@@ -1,0 +1,16 @@
+#Author: lucasarthurpaifilho@lucasarthurpaifilho.com
+
+
+Feature: Login
+  Eu com usuario quero realizar o login para ter acesso ao servico
+
+  Background:  
+    Given que eu esteja no endereço "https://www.advantageonlineshopping.com/#/"
+    And acesso o incone USER
+    
+  Scenario: Login de usuario cadastrado
+    When preencher o formuario de login
+    Then valido usuario logado
+    
+
+ 

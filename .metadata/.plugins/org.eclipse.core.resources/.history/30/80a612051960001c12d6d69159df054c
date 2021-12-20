@@ -1,0 +1,60 @@
+package metodos;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Metodos {
+	
+	WebDriver driver;
+	
+	/**
+	 * esse metodo abre o navegador chorme com o endereço desejado
+	 * @param site
+	 * @author LUCAS
+	 */
+	public void abrirNavegador(String site) {
+		try {
+			System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.get(site);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		} catch (Exception e) {
+			System.err.println("*****erro ao abrir navegador******" +e.getMessage());
+		}
+	}
+	
+	/**
+	 * esse metodo clica no elemento referenciado
+	 * @author LUCAS
+	 */
+	public void clicar(By elemento) {
+		try {
+			driver.findElement(elemento).click();
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		} catch (Exception e) {
+			System.err.println("****erro ao clicar em elemento*****" +e.getMessage());
+			System.err.println("****causa****" +e.getClass());
+		}
+	}
+
+	public void esperarCarregar() {
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
+	/**
+	 * esse metodo procura o campo para digitar e escreve o texto desejado
+	 * @author LUCAS
+	 */
+	public void digitarTexto(By elemento, String texto) {
+		try {
+			driver.findElement(elemento).sendKeys(texto);
+		} catch (Exception e) {
+			System.err.println("****erro ao digitar  texto em elemento*****" +e.getMessage());
+		    
+		}
+	}
+	
+}

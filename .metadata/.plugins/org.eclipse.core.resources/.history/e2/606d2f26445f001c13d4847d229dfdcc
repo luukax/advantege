@@ -1,0 +1,12 @@
+package elementos;
+
+import org.openqa.selenium.By;
+
+public class Elementos {
+
+	private By menuUser = By.id("menuUserLink");
+
+	public By getMenuUser() {
+		return menuUser;
+	}
+}

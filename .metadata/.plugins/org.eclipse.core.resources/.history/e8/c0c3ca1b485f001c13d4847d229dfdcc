@@ -1,0 +1,17 @@
+package elementos;
+
+import org.openqa.selenium.By;
+
+public class Elementos {
+
+	private By menuUser = By.id("menuUserLink");
+	private By novaConta = By.xpath("//*[text()='CREATE NEW ACCOUNT']");
+
+	public By getNovaConta() {
+		return novaConta;
+	}
+
+	public By getMenuUser() {
+		return menuUser;
+	}
+}

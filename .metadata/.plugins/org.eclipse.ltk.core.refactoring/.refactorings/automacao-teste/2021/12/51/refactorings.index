@@ -1,0 +1,10 @@
+1639752326333	Delete element
+1639836826293	Rename type 'Cadastro'
+1639836853787	Rename resource 'cadastro.feature'
+1639840345651	Rename resource 'formulario-cadastro.feature'
+1639865501760	Delete element
+1639866508642	Delete element
+1639870279569	Move 'cadastro.feature' to 'features'
+1639870282280	Move 'login.feature' to 'features'
+1639870422499	Rename package 'Steps'
+1639870681357	Delete element

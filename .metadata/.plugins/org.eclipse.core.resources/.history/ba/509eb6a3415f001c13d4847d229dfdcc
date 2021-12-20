@@ -1,0 +1,17 @@
+#Author: lucasarthurpaifilho@lucasarthurpaifilho.com
+
+@tag
+Feature: Realizar Cadastro
+  Eu como usuario quero fazer o cadastro para ter acesso ao serviço
+
+  @tag1
+  Scenario: Cadastro com sucesso
+    Given que eu esteja no "https://www.advantageonlineshopping.com/#/"
+    And clico no incone USER
+    And clico na opcao CREATE NEW ACCOUNT
+    When preencho o formulario de CREATE ACCOUNT
+    And aceito os termos de privacidade
+    Then regitro o cadastro
+    And valido a home page logado com o usuario cadastrado
+
+  

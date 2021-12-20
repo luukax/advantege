@@ -1,0 +1,32 @@
+package steps;
+
+import elementos.Elementos;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import metodos.Metodos;
+
+public class LoginFormulario {
+	Metodos metodo = new Metodos();
+	Elementos el = new Elementos();
+	@Given("que eu esteja no endereço {string}")
+	public void que_eu_esteja_no_endereço(String site) {
+	    metodo.abrirNavegador(site);
+	}
+	@Given("acesso o incone USER")
+	public void acesso_o_incone_user() {
+	   metodo.clicar(el.getMenuUser());
+	}
+	@When("preencher o formuario de login")
+	public void preencher_o_formuario_de_login() {
+	  metodo.digitarTexto(el.getName(), "Ribamarz");
+	  metodo.digitarTexto(el.getPassword(), "Test2@21");
+	  metodo.clicar(el.getSign());
+	}
+	@Then("valido usuario logado no MY ACCOUNT")
+	public void valido_usuario_logado() {
+		Thread.sleep(2000);
+	    metodo.clicar(el.getUserLogin());
+	}
+
+}

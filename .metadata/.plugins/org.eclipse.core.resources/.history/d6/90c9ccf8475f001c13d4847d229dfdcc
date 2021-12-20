@@ -1,0 +1,6 @@
+package massa;
+
+public class DadosUser {
+
+	String userName1 = "Ribamar@";
+}
